@@ -1,0 +1,8 @@
+create_table :products do |t|
+  t.string :title
+  t.string :price
+  t.string :body
+  t.string :file_name
+
+  t.timestamps null: false
+end

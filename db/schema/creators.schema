@@ -1,0 +1,10 @@
+create_table :creators do |t|
+  t.integer :user_id
+  t.string :skill
+  t.string :body
+
+  t.timestamps null: false
+end
+
+add_index :creators, [:user_id], name: "creators_user_id_idx", using: :btree
+add_foreign_key :creators, :users, name: "creators_user_id_fk", options: "ON UPDATE CASCADE ON DELETE CASCADE"  

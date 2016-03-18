@@ -1,0 +1,6 @@
+create_table :creator_products do |t|
+  t.foreign_key :products, options: "ON UPDATE CASCADE ON DELETE CASCADE"
+  t.foreign_key :creators, options: "ON UPDATE CASCADE ON DELETE CASCADE"
+
+  t.timestamps null: false
+end

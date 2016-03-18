@@ -1,0 +1,8 @@
+create_table :comments do |t|
+  t.foreign_key :products, optinos: "ON UPDATE CASCADE ON DELETE CASCADE"
+  t.foreign_key :users, options: "ON UPDATE CASCADE ON DELETE CASCADE"
+  t.string :title
+  t.string :body
+
+  t.timestamps null: false
+end

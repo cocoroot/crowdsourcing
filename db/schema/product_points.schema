@@ -1,0 +1,6 @@
+create_table :product_points do |t|
+  t.foreign_key :products, options: "ON UPDATE CASCADE ON DELETE CASCADE"
+  t.foreign_key :users, options: "ON UPDATE CASCADE ON DELETE CASCADE"
+
+  t.timestamps null: false
+end
