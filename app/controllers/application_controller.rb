@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 class PermissionError < ActionController::ActionControllerError; end
       
   include ErrorHandlers
-  include CheckPermission
+#  include CheckPermission
 
   protected
 

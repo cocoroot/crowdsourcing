@@ -63,3 +63,6 @@ default: &controller_default
 
 test:
   <<: *controller_default
+
+users:
+  <<: *controller_default
