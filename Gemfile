@@ -71,3 +71,7 @@ group :deployment do
   gem 'capistrano-bundler'
   gem 'capistrano3-unicorn'
 end
+
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'

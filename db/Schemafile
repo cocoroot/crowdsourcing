@@ -2,8 +2,8 @@
 #   require 'schema/user.schema'
 require 'schema/users.schema'
 require 'schema/creators.schema'
-#require 'schema/creator_products.schema'
-#require 'schema/products.schema'
-#require 'schema/comments.schema'
-#require 'schema/product_points.schema'
+require 'schema/creator_products.schema'
+require 'schema/products.schema'
+require 'schema/comments.schema'
+require 'schema/product_points.schema'
 

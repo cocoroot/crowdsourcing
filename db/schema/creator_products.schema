@@ -1,6 +1,12 @@
 create_table :creator_products do |t|
-  t.foreign_key :products, options: "ON UPDATE CASCADE ON DELETE CASCADE"
-  t.foreign_key :creators, options: "ON UPDATE CASCADE ON DELETE CASCADE"
+  t.integer :product_id
+  t.integer :creator_id
 
   t.timestamps null: false
 end
+
+add_index :creator_products, [:product_id] , name: "creator_products_product_id_idx", using: :btree
+add_foreign_key :creator_products, :products, name: "creator_products_product_id_fk", options: "ON UPDATE CASCADE ON DELETE CASCADE"
+
+add_index :creator_products, [:creator_id] , name: "creator_products_creator_id_idx", using: :btree
+add_foreign_key :creator_products, :creators, name: "creator_products_creator_id_fk", options: "ON UPDATE CASCADE ON DELETE CASCADE"
